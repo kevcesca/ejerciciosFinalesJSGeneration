@@ -60,7 +60,7 @@ export default function Ejercicio2() {
                         La conversión a grados Farenheit es: {fahrenheit} °F
                     </Typography>
                     <Typography variant="h4" component="h2" sx={{ color: "white", fontFamily: 'VT323' }}>
-                        La conversión a grados Farenheit es: {kelvin} K
+                        La conversión a grados Kelvin es: {kelvin} K
                     </Typography>
                     
                 </Grid>

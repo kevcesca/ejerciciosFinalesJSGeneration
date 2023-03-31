@@ -1,11 +1,10 @@
 .contenedor-ejercicios{
-    /* background:linear-gradient(to bottom, #000000b3, #3e0071c4), url('../../img/casizelda.gif') no-repeat center; */
-    background: url('../../img/casizelda.gif') no-repeat center;
+    background:linear-gradient(to bottom, #322fd08c, #3e00718a), url('../../img/casizelda.gif') no-repeat center;
+    /* background: url('../../img/casizelda.gif') no-repeat center; */
     background-size: cover;
     width: 100%;
     height: 100%;
 }
-
 
 .fondos-ejercicios{
     background-color: white;
@@ -23,6 +22,17 @@
 }
 
 .respuestas{
+    background-color: #3e0071a2;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+    border-width: 8px;
+    border-color: #FB2576;
+    border-style: double;
+    min-height: 300px;
+}
+
+.java-frame{
     background-color: #3e0071a2;
     border-radius: 10px;
     font-size: 30px;

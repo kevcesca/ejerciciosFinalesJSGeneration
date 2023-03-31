@@ -1,9 +1,8 @@
 .landing-container{
     background: url('../../img/fondo2.gif') no-repeat center;
-    
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 160vh;
 }
 .twhite{
     color: white;
