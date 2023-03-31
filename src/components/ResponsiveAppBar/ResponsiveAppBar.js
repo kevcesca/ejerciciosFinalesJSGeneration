@@ -91,31 +91,42 @@ function ResponsiveAppBar() {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            <MenuItem onClick={handleCloseNavMenu}>{/* Evento que cierra el menu cuando se da click en el */}
+                            <MenuItem onClick={handleCloseNavMenu} sx={{display:"flex", flexDirection:"column", bgcolor: '#332FD0'}}>{/* Evento que cierra el menu cuando se da click en el */}
                                 <Link to="/" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
-                                    <Typography textAlign="center" sx={{ color: "black" }}>Inicio</Typography>
+                                    <Typography textAlign="center" sx={{ color: "white", bgcolor: '#332FD0' }}>Inicio</Typography>
+                                </Link>
+                                <Link to="/Ejercicio1" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
+                                    <Typography textAlign="center" sx={{ color: "white", bgcolor: '#332FD0' }}>Ejercicio 1</Typography>
+                                </Link>
+                                <Link to="/Ejercicio2" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
+                                    <Typography textAlign="center" sx={{ color: "white", bgcolor: '#332FD0' }}>Ejercicio 2</Typography>
+                                </Link>
+                                <Link to="/Ejercicio3" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
+                                    <Typography textAlign="center" sx={{ color: "white", bgcolor: '#332FD0' }}>Ejercicio 3</Typography>
+                                </Link>
+                                <Link to="/Ejercicio4" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
+                                    <Typography textAlign="center" sx={{ color: "white", bgcolor: '#332FD0' }}>Ejercicio 4</Typography>
+                                </Link>
+                                <Link to="/Ejercicio5" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
+                                    <Typography textAlign="center" sx={{ color: "white", bgcolor: '#332FD0' }}>Ejercicio 5</Typography>
+                                </Link>
+                                <Link to="/Ejercicio6" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
+                                    <Typography textAlign="center" sx={{ color: "white", bgcolor: '#332FD0' }}>Ejercicio 6</Typography>
+                                </Link>
+                                <Link to="/Ejercicio7" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
+                                    <Typography textAlign="center" sx={{ color: "white", bgcolor: '#332FD0' }}>Ejercicio 7</Typography>
+                                </Link>
+                                <Link to="/Ejercicio8" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
+                                    <Typography textAlign="center" sx={{ color: "white", bgcolor: '#332FD0' }}>Ejercicio 8</Typography>
+                                </Link>
+                                <Link to="/Ejercicio9" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
+                                    <Typography textAlign="center" sx={{ color: "white", bgcolor: '#332FD0' }}>Ejercicio 9</Typography>
+                                </Link>
+                                <Link to="/Ejercicio10" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
+                                    <Typography textAlign="center" sx={{ color: "white", bgcolor: '#332FD0' }}>Ejercicio 10</Typography>
                                 </Link>
                             </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>{/* Evento que cierra el menu cuando se da click en el */}
-                                <Link to="/publicaciones" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
-                                    <Typography textAlign="center" sx={{ color: "black" }}>Publicaciones</Typography>
-                                </Link>
-                            </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>{/* Evento que cierra el menu cuando se da click en el */}
-                                <Link to="/nosotros" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
-                                    <Typography textAlign="center" sx={{ color: "black" }}>Nosotros</Typography>
-                                </Link>
-                            </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>{/* Evento que cierra el menu cuando se da click en el */}
-                                <Link to="/contacto" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
-                                    <Typography textAlign="center" sx={{ color: "black" }}>Contacto</Typography>
-                                </Link>
-                            </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>{/* Evento que cierra el menu cuando se da click en el */}
-                                <Link to="/registrar" className='link-decoration'>{/* Permite redireccion a otra página por medio de react-router */}
-                                    <Typography textAlign="center" className='link-decoration'>Registrarse</Typography>
-                                </Link>
-                            </MenuItem>
+                            
                         </Menu>
                     </Box>
 
