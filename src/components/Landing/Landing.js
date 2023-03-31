@@ -18,18 +18,19 @@ export default function Landing() {
             <Grid container>
             
                 <Grid item xs={12} md={6} lg={4} display="flex" justifyContent="center" alignItems="center" sx={{marginBottom:"15px"}}>
-                    <Link to="/ejercicio1">
+                    <Link to="/ejercicio1" className='link-cards'>
                         <NewCard 
                             img={js} 
                             talt="JavaScript"
                             description="Acomodar numeros de mayor a menor y de menor a mayor" 
                             title="Ejercicio 1">
+                            
                         </NewCard>
                     </Link>
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={4} display="flex" justifyContent="center" alignItems="center" sx={{marginBottom:"15px"}}>
-                    <Link to="/ejercicio2">
+                    <Link to="/ejercicio2" className='link-cards'>
                         <NewCard 
                             img={js} 
                             talt="JavaScript"
@@ -40,7 +41,7 @@ export default function Landing() {
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={4} display="flex" justifyContent="center" alignItems="center" sx={{marginBottom:"15px"}}>
-                    <Link to="/ejercicio3">
+                    <Link to="/ejercicio3" className='link-cards'>
                         <NewCard 
                             img={js} 
                             talt="JavaScript"
@@ -51,7 +52,7 @@ export default function Landing() {
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={4} display="flex" justifyContent="center" alignItems="center" sx={{marginBottom:"15px"}}>
-                    <Link to="/ejercicio4">
+                    <Link to="/ejercicio4" className='link-cards'>
                         <NewCard 
                             img={js} 
                             talt="JavaScript"
@@ -62,7 +63,7 @@ export default function Landing() {
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={4} display="flex" justifyContent="center" alignItems="center" sx={{marginBottom:"15px"}}>
-                    <Link to="/ejercicio5">
+                    <Link to="/ejercicio5" className='link-cards'>
                         <NewCard 
                             img={js} 
                             talt="JavaScript"
@@ -73,7 +74,7 @@ export default function Landing() {
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={4} display="flex" justifyContent="center" alignItems="center" sx={{marginBottom:"15px"}}>
-                    <Link to="/ejercicio6">
+                    <Link to="/ejercicio6" className='link-cards'>
                         <NewCard 
                             img={jar} 
                             talt="JavaScript"
@@ -84,7 +85,7 @@ export default function Landing() {
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={4} display="flex" justifyContent="center" alignItems="center" sx={{marginBottom:"15px"}}>
-                    <Link to="/ejercicio7">
+                    <Link to="/ejercicio7" className='link-cards'>
                         <NewCard 
                             img={jar} 
                             talt="JavaScript"
@@ -95,7 +96,7 @@ export default function Landing() {
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={4} display="flex" justifyContent="center" alignItems="center" sx={{marginBottom:"15px"}}>
-                    <Link to="/ejercicio8">
+                    <Link to="/ejercicio8" className='link-cards'>
                         <NewCard 
                             img={jar} 
                             talt="JavaScript"
@@ -106,7 +107,7 @@ export default function Landing() {
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={4} display="flex" justifyContent="center" alignItems="center" sx={{marginBottom:"15px"}}>
-                    <Link to="/ejercicio9">
+                    <Link to="/ejercicio9" className='link-cards'>
                         <NewCard 
                             img={jar} 
                             talt="JavaScript"
@@ -117,7 +118,7 @@ export default function Landing() {
                 </Grid>
 
                 <Grid item xs={12} md={6} lg={4} display="flex" justifyContent="center" alignItems="center" sx={{marginBottom:"15px"}}>
-                    <Link to="/ejercicio10">
+                    <Link to="/ejercicio10" className='link-cards'>
                         <NewCard 
                             img={jar} 
                             talt="JavaScript"

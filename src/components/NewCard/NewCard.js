@@ -11,16 +11,16 @@ export default function NewCard({img, talt, description, title,}) {
     return (
         
         <div  className="cards">
-            <Card sx={{ width: 345}}  className="cards" >
+            <Card sx={{ width: 345, backgroundColor: "#3e0071a2", textDecoration:"none"}}  className="cards" >
                 <CardActionArea >
                     <CardMedia
                         component="img"
-                        height="200"
+                        height="120"
                         image={img}
                         alt={talt}
                     />
                     <CardContent className="cards twhite" >
-                        <Typography sx={{fontFamily: 'VT323', textAlign:'center'}} variant="h4" component="div">
+                        <Typography sx={{fontFamily: 'VT323', textAlign:'center', textDecoration:"none"}} variant="h4" component="div">
                             {title}
                         </Typography>
                         <Typography sx={{fontFamily: 'VT323', textAlign:'center', fontSize:"20px"}} variant="body2">

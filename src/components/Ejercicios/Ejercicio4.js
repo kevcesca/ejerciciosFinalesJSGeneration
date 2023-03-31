@@ -1,9 +1,23 @@
 import React, { useState } from 'react';
-import { Grid, TextField, Button, Typography } from '@mui/material';
+import { Grid, TextField, Button, Typography, Modal } from '@mui/material';
 import './Ejercicios.css'
+import Box from '@mui/material/Box';
+import diagrama from '../../img/diagramas/ejercicio4.png'
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
 
 
-export default function Ejercicio1() {
+export default function Ejercicio4() {
     // Crear un programa en JavaScript que realice lo siguiente:
 
     // Input
@@ -16,6 +30,9 @@ export default function Ejercicio1() {
 
     const [number, setNumber] = useState('');
     const [fibonacciSeries, setFibonacciSeries] = useState([]);
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
     const calculateFibonacci = (num) => {
         if (!num) {
@@ -46,7 +63,24 @@ export default function Ejercicio1() {
                 </Grid>
             </Grid>
 
-            <Grid container className='twhite' display="flex" direction="column" justifyContent="center" alignItems="center" sx={{ marginTop: "5px" }}>
+            {/* Modal para diagramas */}
+            <Grid container >
+                <Grid item display="flex" justifyContent="center" alignItems="center" xs={12}>
+                    <Button variant="contained" color="primary" onClick={handleOpen}>Diagrama de flujo</Button>
+                    <Modal
+                        open={open}
+                        onClose={handleClose}
+                        aria-labelledby="modal-modal-title"
+                        aria-describedby="modal-modal-description"
+                    >
+                        <Box sx={style}>
+                            <img className='diagramas' src={diagrama} alt="Diagrama de flujo"></img>
+                        </Box>
+                    </Modal>
+                </Grid>
+            </Grid>
+
+            <Grid container className='twhite' display="flex" direction="column" justifyContent="center" alignItems="center" sx={{ marginTop: "35px" }}>
                 <Grid className='fondos-ejercicios' item xs={8} display="flex" direction="column" justifyContent="center" alignItems="center">
                     <Typography variant="h4" component="h1" sx={{ color: "black", marginBottom: "15px", fontFamily: 'VT323' }}>
                         Calcular serie Fibonacci
@@ -58,7 +92,7 @@ export default function Ejercicio1() {
                         type="number"
                     />
                 </Grid>
-                <Grid item xs={8} display="flex" justifyContent="center" alignItems="center" sx={{marginTop: "25px"}}> 
+                <Grid item xs={8} display="flex" justifyContent="center" alignItems="center" sx={{ marginTop: "25px" }}>
                     <Button variant="contained" color="primary" onClick={handleCalculate}>
                         Calcular
                     </Button>
@@ -70,7 +104,7 @@ export default function Ejercicio1() {
                     <p className='twhite'>
                         Serie de Fibonacci: {fibonacciSeries.join(', ')}
                     </p>
-                </Grid> 
+                </Grid>
             </Grid>
 
         </div>

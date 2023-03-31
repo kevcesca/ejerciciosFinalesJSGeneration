@@ -42,3 +42,18 @@
     border-style: double;
     min-height: 300px;
 }
+
+.diagramas{
+    height: 700px;
+    width: auto;
+}
+
+.java-frame::-webkit-scrollbar-thumb {
+    background: #fb2577ad;
+    border-radius: 10px;
+}
+
+.java-frame::-webkit-scrollbar{
+    width: 10px;
+    background: #332FD0;
+}

@@ -1,11 +1,12 @@
 .landing-container{
-    background: url('../../img/fondo2.gif') no-repeat center;
+    background: linear-gradient(to bottom, #322fd08c, #3e00718a), url('../../img/fondo2.gif') no-repeat center;
     background-size: cover;
     width: 100%;
-    height: 160vh;
+    height: 100%;
 }
 .twhite{
     color: white;
+    text-decoration: none;
 }
 .titles{
     background-color: #3e0071a2;
@@ -16,4 +17,9 @@
     border-color: #FB2576;
     border-style: double;
     padding: 4px;
+    text-decoration: none;
+}
+
+.link-cards{
+    text-decoration: none;
 }

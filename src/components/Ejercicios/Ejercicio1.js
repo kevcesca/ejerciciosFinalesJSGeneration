@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import { Grid, TextField, Button, Modal, Typography } from '@mui/material';
 import './Ejercicios.css'
+import Box from '@mui/material/Box';
+import diagrama from '../../img/diagramas/ejercicio1.png'
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
 
 
 export default function Ejercicio1() {
@@ -18,6 +32,9 @@ export default function Ejercicio1() {
     const [mayorMenor, setMayorMenor] = useState([]);
     const [menorMayor, setMenorMayor] = useState([]);
     const [mostrarModal, setMostrarModal] = useState(false);
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
     const handleCerrarModal = () => {
         setMostrarModal(false);
@@ -49,15 +66,15 @@ export default function Ejercicio1() {
         <div className='contenedor-ejercicios'>
 
             <Grid container >
-                <Grid item xs={12}>
-                    <Modal open={mostrarModal} onClose={handleCerrarModal} sx={{width: 400 }}>
-                        <div  display="flex" justifyContent="center" alignItems="center" style={{ backgroundColor: 'white', padding: '2rem' }}>
+                <Grid item display="flex" justifyContent="center" alignItems="center" xs={12}>
+                    <Modal open={mostrarModal} onClose={handleCerrarModal} sx={{ width: 400 }}>
+                        <div style={{ backgroundColor: 'white', padding: '2rem' }}>
                             <Typography variant="h4">¡Los números son iguales!</Typography>
                             <Button variant="contained" color="primary" onClick={handleCerrarModal}>
                                 Cerrar
                             </Button>
                         </div>
-                    </Modal>    
+                    </Modal>
                 </Grid>
             </Grid>
 
@@ -66,11 +83,28 @@ export default function Ejercicio1() {
                     <h1 className="titles twhite">
                         Ejercicio 1
                     </h1>
-                    
+
                 </Grid>
             </Grid>
 
-            <Grid container className='twhite' display="flex" direction="column" justifyContent="center" alignItems="center" sx={{marginTop: "5px"}}>
+            {/* Modal para diagramas */}
+            <Grid container >
+                <Grid item display="flex" justifyContent="center" alignItems="center" xs={12}>
+                    <Button variant="contained" color="primary" onClick={handleOpen}>Diagrama de flujo</Button>
+                    <Modal
+                        open={open}
+                        onClose={handleClose}
+                        aria-labelledby="modal-modal-title"
+                        aria-describedby="modal-modal-description"
+                    >
+                        <Box sx={style}>
+                            <img className='diagramas' src={diagrama} alt="Diagrama de flujo"></img>
+                        </Box>
+                    </Modal>
+                </Grid>
+            </Grid>
+
+            <Grid container className='twhite' display="flex" direction="column" justifyContent="center" alignItems="center" sx={{ marginTop: "35px" }}>
                 <Grid className='fondos-ejercicios' item xs={8} display="flex" direction="column" justifyContent="center" alignItems="center">
                     <>
                         <TextField
@@ -102,24 +136,24 @@ export default function Ejercicio1() {
                         />
                     </>
                 </Grid>
-                <Grid item xs={8} display="flex" justifyContent="center" alignItems="center" sx={{marginTop: "25px"}}> 
+                <Grid item xs={8} display="flex" justifyContent="center" alignItems="center" sx={{ marginTop: "25px" }}>
                     <div>
-                        <Button variant="contained" color="primary" onClick={ordenarMayorMenor} sx={{marginRight: "30px"}}>
+                        <Button variant="contained" color="primary" onClick={ordenarMayorMenor} sx={{ marginRight: "30px" }}>
                             Ordenar de mayor a menor
                         </Button>
                     </div>
                     <div>
-                        <Button variant="contained" color="primary" onClick={ordenarMenorMayor} sx={{marginLeft: "30px"}}>
+                        <Button variant="contained" color="primary" onClick={ordenarMenorMayor} sx={{ marginLeft: "30px" }}>
                             Ordenar de menor a mayor
                         </Button>
                     </div>
                 </Grid>
             </Grid>
 
-            <Grid container display="flex" justifyContent="center" alignItems="center" sx={{marginTop: "30px", paddingBottom: "30px"}}>
-                <Grid item xs={8} display="flex" justifyContent="center" alignItems="center" className='respuestas'> 
+            <Grid container display="flex" justifyContent="center" alignItems="center" sx={{ marginTop: "30px", paddingBottom: "30px" }}>
+                <Grid item xs={8} display="flex" justifyContent="center" alignItems="center" className='respuestas'>
 
-                    <p className='twhite'>Los numeros ordenados son:                 
+                    <p className='twhite'>Los numeros ordenados son:
                         {menorMayor.map((num) => (
                             <p className='twhite' key={num}>{num}</p>
                         ))}

@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import { Grid, TextField, Button, Modal, Typography } from '@mui/material';
 import './Ejercicios.css'
+import Box from '@mui/material/Box';
+import diagrama from '../../img/diagramas/ejercicio2.png'
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
 
 
 export default function Ejercicio2() {
@@ -17,6 +31,9 @@ export default function Ejercicio2() {
     const [celsius, setCelsius] = useState('');
     const [fahrenheit, setFahrenheit] = useState('');
     const [kelvin, setKelvin] = useState('');
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
 
     const handleInputChange = (event) => {
@@ -35,11 +52,27 @@ export default function Ejercicio2() {
                     <h1 className="titles twhite">
                         Ejercicio 2
                     </h1>
-
                 </Grid>
             </Grid>
 
-            <Grid container className='twhite' display="flex" direction="column" justifyContent="center" alignItems="center" sx={{ marginTop: "5px" }}>
+            {/* Modal para diagramas */}
+            <Grid container >
+                <Grid item display="flex" justifyContent="center" alignItems="center" xs={12}>
+                    <Button variant="contained" color="primary" onClick={handleOpen}>Diagrama de flujo</Button>
+                    <Modal
+                        open={open}
+                        onClose={handleClose}
+                        aria-labelledby="modal-modal-title"
+                        aria-describedby="modal-modal-description"
+                    >
+                        <Box sx={style}>
+                            <img className='diagramas' src={diagrama} alt="Diagrama de flujo"></img>
+                        </Box>
+                    </Modal>
+                </Grid>
+            </Grid>
+
+            <Grid container className='twhite' display="flex" direction="column" justifyContent="center" alignItems="center" sx={{ marginTop: "35px" }}>
                 <Grid className='fondos-ejercicios' item xs={8} display="flex" direction="column" justifyContent="center" alignItems="center">
                     <Typography variant="h4" component="h1" sx={{ color: "black", marginBottom: "15px", fontFamily: 'VT323' }}>
                         Ingresa los grados en Celsius
@@ -62,9 +95,9 @@ export default function Ejercicio2() {
                     <Typography variant="h4" component="h2" sx={{ color: "white", fontFamily: 'VT323' }}>
                         La conversión a grados Kelvin es: {kelvin} K
                     </Typography>
-                    
+
                 </Grid>
-                    
+
             </Grid>
 
         </div>
